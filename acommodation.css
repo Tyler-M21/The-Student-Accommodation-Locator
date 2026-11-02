@@ -1,3 +1,29 @@
 h2{
 font-family: 'Courier New', Courier, monospace;
 }
+
+.work{
+    font-family:'Times New Roman', Times, serif;
+    /* background-color: purple; */
+    /* text-align:left; */
+    /* display:contents; */
+    width: 150vh;
+    height: 100vh;
+
+}
+
+.detail{
+    /* background-color: brown; */
+    display: contents;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+    width: 25vh;
+    height: 50vh;
+}
+.fine{
+    /* background-color: red; */
+    display:inline;
+    font-family: 'Times New Roman', Times, serif;
+    width: 35vh;
+    height: 45vh;
+}
