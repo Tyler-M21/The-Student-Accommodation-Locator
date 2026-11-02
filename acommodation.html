@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Accommodation Finder</title>
+
+</head>
+<body>
+  <h2>Accommodation Finder</h2>
+
+  <!-- Step 1: Collect student details -->
+  <form id="accommodationForm">
+    <label>Access Number / Email:</label><br>
+    <input type="text" id="access" required><br><br>
+
+    <label>Preferred Location:</label><br>
+<select id="location" required>
+  <option value="">Select Location </option>
+  <option value="Kauga">Kauga</option>
+  <option value="Buguju">Buguju</option>
+  <option value="Nabuti">Nabuti</option>
+</select>
+<br><br>
+
+    <label>Budget (UGX):</label><br>
+    <input type="number" id="budget" required><br><br>
+
+    <label>Preferred Room Type:</label><br>
+    <input type="text" id="roomType" required><br><br>
+
+    <button type="button" onclick="findAccommodation()">Find Accommodation</button>
+  </form>
+
+  <!-- Step 7: Display results -->
+  <div id="results"></div>
+
+  
+</body>
+</html>
