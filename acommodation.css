@@ -43,3 +43,27 @@ font-family: 'Courier New', Courier, monospace;
   line-height: 1.8;
   border-top: 4px solid #006633; 
 }
+.finder-form{
+   background-color: lightblue;
+  color: #333;
+  padding: 20px;
+  margin: 20px auto;
+  text-align: center;
+  font-style: oblique;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  border-top: 4px solid #006633;
+  border-bottom: 4px solid #006633;
+}
+
+ 
+.finder-form input[type="text"],
+.finder-form input[type="email"],
+.finder-form input[type="number"],
+.finder-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+/*Acommodation page styling updated by Adesina Nuwaha*/
