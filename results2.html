@@ -1,45 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Available Accommodation</title>
+
+  <!-- 1. Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Your colors on top of Bootstrap -->
+  <style>
+    .bg-navy { background-color: #003366; color: #e6f0ff; border-bottom: 4px solid #006633; }
+    .hostel-card { background-color: lightblue; color: #333; border-top: 4px solid #006633; border-bottom: 4px solid #006633; }
+    .hostel-card h3, .room-box h4 { color: #003366; }
+    .price { color: #006633; font-weight: 700; }
+    .btn-green { background-color: #006633; color: #fff; font-weight: 700; }
+    .btn-green:hover, .btn-green:focus { background-color: #004d26; color: #fff; }
+    .site-link { color: lightblue; text-decoration: none; font-weight: 600; }
+    .photo { height: 320px; width: 100%; object-fit: cover; }
+  </style>
 </head>
 <body>
-   <head>
-   <title>Available Accomodation</title>
-</head>
-<body>
-    <h1>Available Accomodations</h1>
-   
-    <p>Welcome! <br> Here are the available rooms.</p>
 
-   
-   <h2>Available rooms</h2>
+  <!-- Header -->
+  <header class="bg-navy text-center py-4 px-3">
+    <h1 class="h2 mb-1">Available Accommodation</h1>
+    <p class="mb-1">Welcome! Here are the available rooms.</p>
+    <a class="site-link" href="index.html">&larr; Back to search</a>
+  </header>
 
-   <h4>Victory Hostel</h4>
+  <main class="container my-4">
+    <h2 class="h4 mb-3" style="color:#003366;">Available rooms</h2>
 
-   <h6>ROOM TYPES:</h6>
-   
-   
-   <p>Self-Contained:</p>
-   <p>Single : UGX900,000</p>
-   <p>Double : UGX600,000</p> 
+    <!-- Hostel card -->
+    <section class="hostel-card rounded p-3 p-md-4 mb-4">
+      <h3 class="h4 mb-1">Victory Hostel</h3>
+      <p class="fw-bold mb-3" style="color:#006633;">Room types</p>
 
-   <hr>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <div class="room-box bg-white rounded p-3 h-100">
+            <h4 class="h6 mb-2">Self-Contained</h4>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex justify-content-between px-0">
+                <span>Single</span> <span class="price">UGX 900,000</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between px-0">
+                <span>Double</span> <span class="price">UGX 600,000</span>
+              </li>
+            </ul>
+          </div>
+        </div>
 
-   <p>Non Self-Contained:</p>
-   <p>Single: UGX600,000</p>
-   <p>Double: UGX750,000</p>
+        <div class="col-md-6">
+          <div class="room-box bg-white rounded p-3 h-100">
+            <h4 class="h6 mb-2">Non Self-Contained</h4>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex justify-content-between px-0">
+                <span>Single</span> <span class="price">UGX 600,000</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between px-0">
+                <span>Double</span> <span class="price">UGX 750,000</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-   <img src="WhatsApp Image 2026-11-04 at 15.56.42.jpeg" height="450px" width="350px">
+      <!-- Photos -->
+      <div class="row g-3 mt-1">
+        <div class="col-sm-6">
+          <img class="photo rounded border border-3 border-white" src="WhatsApp Image 2026-11-04 at 15.56.42.jpeg" alt="Victory Hostel room">
+        </div>
+        <div class="col-sm-6">
+          <img class="photo rounded border border-3 border-white" src="WhatsApp Image 2026-11-04 at 15.56.42 (1).jpeg" alt="Victory Hostel room">
+        </div>
+      </div>
+    </section>
 
-   <br>
-   <br>
+    <a class="btn btn-green px-4 py-2" href="index.html">Search again</a>
+  </main>
 
-   <img src="WhatsApp Image 2026-11-04 at 15.56.42 (1).jpeg" height="450px" width="350px">
-
-  </form>
-   
+  <!-- 2. Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

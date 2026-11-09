@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Cribs | Student Accommodation Finder</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --ink: #14264a;
+      --gold: #f2b631;
+      --gold-deep: #d99a0b;
+      --paper: #f6f4ef;
+      --white: #ffffff;
+      --muted: #5b6577;
+      --bs-body-font-family: "Nunito Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+      --bs-body-bg: var(--paper);
+      --bs-body-color: var(--ink);
+    }
+    h1, h2, h3, .brand { font-family: "Bricolage Grotesque", "Trebuchet MS", sans-serif; }
+
+    /* Top bar */
+    .topbar { background: var(--ink); }
+    .brand { color: var(--white); font-weight: 800; font-size: 1.35rem; text-decoration: none; letter-spacing: .02em; }
+    .brand span { color: var(--gold); }
+    .topbar .nav-link { color: #dbe2f1; font-weight: 600; }
+    .topbar .nav-link:hover, .topbar .nav-link:focus { color: var(--gold); }
+
+    /* Hero */
+    .hero { background: var(--ink); color: var(--white); padding: 3.5rem 0 7rem; }
+    .hero h1 { font-weight: 800; font-size: clamp(2.3rem, 5.5vw, 3.9rem); line-height: 1.05; max-width: 14ch; }
+    .hero p.lead { color: #c9d3ea; max-width: 38ch; }
+    .hero-points { list-style: none; padding: 0; margin: 1.75rem 0 0; color: #dbe2f1; }
+    .hero-points li { padding-left: 1.6rem; position: relative; margin-bottom: .5rem; }
+    .hero-points li::before {
+      content: ""; position: absolute; left: 0; top: .5em; width: .75rem; height: .75rem;
+      border-radius: 50%; background: var(--gold);
+    }
+
+    /* Finder card overlaps the hero */
+    .finder-wrap { margin-top: -5rem; }
+    .finder-card {
+      background: var(--white); border: 0; border-radius: 1.25rem;
+      box-shadow: 0 18px 40px rgba(20, 38, 74, .18);
+      border-top: 6px solid var(--gold);
+    }
+    .finder-card h2 { font-weight: 800; font-size: 1.6rem; }
+    .form-label { font-weight: 700; font-size: .95rem; }
+    .form-control, .form-select { padding: .7rem .9rem; border-color: #cdd3df; border-radius: .6rem; }
+    .form-control:focus, .form-select:focus {
+      border-color: var(--ink); box-shadow: 0 0 0 .25rem rgba(242, 182, 49, .45);
+    }
+    .btn-find {
+      background: var(--gold); color: var(--ink); font-weight: 800; border: 0;
+      padding: .85rem 1.5rem; border-radius: .6rem;
+    }
+    .btn-find:hover, .btn-find:focus { background: var(--gold-deep); color: var(--ink); }
+    .hint { color: var(--muted); font-size: .85rem; }
+
+    /* How it works */
+    .steps h3 { font-size: 1.15rem; font-weight: 800; }
+    .steps p { color: var(--muted); margin: 0; }
+    .step-dot {
+      width: 2.5rem; height: 2.5rem; border-radius: 50%; background: var(--ink); color: var(--gold);
+      display: inline-flex; align-items: center; justify-content: center; font-weight: 800; margin-bottom: .75rem;
+    }
+
+    /* Footer */
+    footer { background: var(--ink); color: #c9d3ea; }
+    footer h3 { color: var(--white); font-size: 1.1rem; font-weight: 800; }
+    footer a { color: var(--gold); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    .contact-list { list-style: none; padding: 0; margin: 0; }
+    .contact-list li { display: flex; justify-content: space-between; max-width: 18rem; padding: .25rem 0; border-bottom: 1px solid rgba(255,255,255,.12); }
+    .legal { border-top: 1px solid rgba(255,255,255,.15); font-size: .85rem; }
+  </style>
+</head>
+<body>
+
+  <!-- Top bar -->
+  <nav class="topbar py-3">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+      <a class="brand" href="index.html">CAMPUS <span>CRIBS</span></a>
+      <ul class="nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contacts">Contact us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <h1>Skip the search, find your spot</h1>
+      <p class="lead mt-3">Rooms near Uganda Christian University, matched to your location and budget.</p>
+      <ul class="hero-points">
+        <li>Hostels in Kauga, Buguju and Nabuti</li>
+        <li>Filter by budget and room type</li>
+        <li>Call the hostel contact directly</li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Finder form -->
+  <main>
+    <section class="container finder-wrap">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 col-xl-7">
+          <div class="card finder-card p-4 p-md-5">
+            <h2 class="mb-1">Find your room</h2>
+            <p class="hint mb-4">Tell us what you need and we will show matching hostels.</p>
+
+            <form id="accomms" class="finder-form" action="results2.html" method="get">
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="you@example.com" required>
+              </div>
+
+              <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                  <label for="location" class="form-label">Preferred location</label>
+                  <select id="location" name="location" class="form-select" required>
+                    <option value="">Select a location</option>
+                    <option value="Kauga">Kauga</option>
+                    <option value="Buguju">Buguju</option>
+                    <option value="Nabuti">Nabuti</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label for="budget" class="form-label">Budget (UGX)</label>
+                  <input type="number" id="budget" name="budget" class="form-control" min="0" step="1000" placeholder="e.g. 400000" required>
+                </div>
+              </div>
+
+              <div class="mb-4">
+                <label for="roomType" class="form-label">Preferred room type</label>
+                <input type="text" id="roomType" name="roomType" class="form-control" list="roomTypes" placeholder="e.g. Single, Double" required>
+                <datalist id="roomTypes">
+                  <option value="Single">
+                  <option value="Double">
+                  <option value="Self-contained">
+                </datalist>
+              </div>
+
+              <button type="submit" class="btn btn-find w-100">Find accommodation</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="container steps py-5 my-4">
+      <h2 class="fw-bold mb-4">How it works</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <span class="step-dot">1</span>
+          <h3>Enter your details</h3>
+          <p>Pick a location, set your budget and choose a room type.</p>
+        </div>
+        <div class="col-md-4">
+          <span class="step-dot">2</span>
+          <h3>See matching rooms</h3>
+          <p>We list the hostels that fit what you asked for.</p>
+        </div>
+        <div class="col-md-4">
+          <span class="step-dot">3</span>
+          <h3>Call the hostel</h3>
+          <p>Use the contacts below to ask questions and book a visit.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="pt-5">
+    <div class="container">
+      <div class="row g-4 pb-4">
+        <div class="col-md-5">
+          <h3>Student Accommodation Finder, UCU</h3>
+          <p>Helping Uganda Christian University students find a place to stay.</p>
+          <p class="mb-0">Site support:<br><a href="mailto:victddamba@gmail.com">victddamba@gmail.com</a></p>
+        </div>
+        <div class="col-md-7" id="contacts">
+          <h3>Hostel inquiries</h3>
+          <ul class="contact-list">
+            <li><span>Tyler</span> <a href="tel:0779102706">0779102706</a></li>
+            <li><span>Peninah</span> <a href="tel:0702266085">0702266085</a></li>
+            <li><span>Kahinda</span> <a href="tel:0751003005">0751003005</a></li>
+            <li><span>Adesina</span> <a href="tel:0741843017">0741843017</a></li>
+            <li><span>Eric</span> <a href="tel:0709010139">0709010139</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="legal py-3 text-center">&copy; 2026 Student Accommodation Finder, UCU. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
