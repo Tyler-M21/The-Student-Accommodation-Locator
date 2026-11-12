@@ -70,12 +70,12 @@
 
               <div class="mb-4">
                 <label for="roomType" class="form-label">Preferred room type</label>
-                <input type="text" id="roomType" name="roomType" class="form-control" list="roomTypes" placeholder="e.g. Single, Double" required>
-                <datalist id="roomTypes">
-                  <option value="Single">
-                  <option value="Double">
-                  <option value="Self-contained">
-                </datalist>
+                <select id="roomTypes" name="roomType" class="form-control" list="roomTypes" placeholder="e.g. Single, Double" required>
+                 <option value="">Select Room Type</option>
+                  <option value="Single">Single</option>
+                  <option value="Double">Double</option>
+                  <option value="Self-contained">Self-Contained</option>
+                </select>
               </div>
 
               <button type="submit" class="btn btn-find w-100">Find accommodation</button>
@@ -125,6 +125,7 @@
             <li><span>Kahinda</span> <a href="tel:0751003005">0751003005</a></li>
             <li><span>Adesina</span> <a href="tel:0741843017">0741843017</a></li>
             <li><span>Eric</span> <a href="tel:0709010139">0709010139</a></li>
+            <li><span>Custodian</span> <a href="tel:0784554164">0784554164</a></li>
           </ul>
         </div>
       </div>
